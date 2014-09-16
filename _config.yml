@@ -1,58 +1,20 @@
+# Site wide configuration
+
 title:            Thomas Toye
-description:      Personal website of Thomas Toye
-# Your site's domain goes here. Leave localhost server or blank when working locally.
+locale:           en_UK
 url:              http://thomastoye.be
 
-# Owner/author information
-owner:
-  name:           Thomas Toye
-  avatar:         thomas.jpg
-  bio:            "Student interested in web development, scalability and hiking. Currently studying NCMT at Howest."
-  email:          hello@thomastoye.be
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:       thomas_toye
-  facebook:      thomas.toye
-  github:        doublet
-  stackoverflow:
-  linkedin:
-  instagram:
-  lastfm:
-  tumblr:
-  pinterest:
-  foursquare:
-  steam:
-  dribbble:
-  google_plus:  http://plus.google.com/105126407595204480790
-  # For Google Authorship https://plus.google.com/authorship
 
+# Jekyll configuration
 
-# Analytics and webmaster tools stuff goes here
-google_analytics:   UA-48804932-1
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:        
-
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About
-    url: /about/
-  - title: Posts
-    url: /posts/
-#  - title: Theme Setup
-#    url: /theme-setup/
-#  - title: Made Mistakes
-#    url: http://mademistakes.com
-#    external: true
-
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    Europe/Brussels
-future:      true
-pygments:    true
-markdown:    kramdown
-
-# https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
 
 kramdown:
   auto_ids: true
@@ -61,12 +23,33 @@ kramdown:
   toc_levels: 1..6
   use_coderay: false
 
-  coderay:
-    coderay_line_numbers: 
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+
+# Site owner
+owner:
+  name: Thomas Toye
+  avatar: thomas.jpg
+  bio: "Student interested in web development, scalability and hiking. Currently studying NCMT at Howest."
+  email: hello@thomastoye.be
+  disqus-shortname: 
+  twitter: thomas_toye
+  facebook: thomas.toye
+  google:
+    plus: 105126407595204480790
+    analytics: UA-48804932-1
+    verify: lBiI-hjpBtNrIuidz-43tZbY2DLG94rCB-81TkHNhXo
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: doublet
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  instagram: #username
+  lastfm: siyck
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
